@@ -58,10 +58,8 @@ const formatGuardianArticle = (article) => ({
 // Fetch news from Guardian API
 export const fetchFromGuardian = async (query = "", page = 1) => {
   try {
-    console.log(process.env.GUARDIAN_API_KEY);
-
     const response = await axios.get(
-      `${GUARDIAN_API_BASE_URL}/search?api-key=b4703a03-afeb-446d-b446-66ca6604c565`
+      `${GUARDIAN_API_BASE_URL}/search?api-key=${process.env.NEXT_PUBLIC_GUARDIAN_API_KEY}`
     );
     console.log(response.data.response.results);
 
