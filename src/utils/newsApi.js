@@ -73,51 +73,6 @@ export const fetchFromGuardian = async (query = "", page = 1) => {
   }
 };
 
-// Apply filtering
-// let filteredArticles = [...mockArticles];
-
-// if (query) {
-//   const lowerQuery = query.toLowerCase();
-//   filteredArticles = filteredArticles.filter(
-//     (article) =>
-//       article.title.toLowerCase().includes(lowerQuery) ||
-//       article.description.toLowerCase().includes(lowerQuery)
-//   );
-// }
-
-// if (filters.author) {
-//   filteredArticles = filteredArticles.filter((article) =>
-//     article.author.toLowerCase().includes(filters.author.toLowerCase())
-//   );
-// }
-
-// if (filters.startDate) {
-//   const startDate = new Date(filters.startDate);
-//   filteredArticles = filteredArticles.filter(
-//     (article) => new Date(article.publishedAt) >= startDate
-//   );
-// }
-
-// if (filters.endDate) {
-//   const endDate = new Date(filters.endDate);
-//   endDate.setHours(23, 59, 59, 999); // End of day
-//   filteredArticles = filteredArticles.filter(
-//     (article) => new Date(article.publishedAt) <= endDate
-//   );
-// }
-
-// if (filters.type && filters.type !== "all") {
-//   filteredArticles = filteredArticles.filter(
-//     (article) => article.type === filters.type
-//   );
-// }
-
-// return {
-//   articles: filteredArticles,
-//   totalResults: filteredArticles.length,
-// };
-
-// Main function to fetch news from all sources or mock data
 export const fetchNews = async (query = "", filters = {}, useMock = true) => {
   try {
     // Fetch from multiple sources and combine results
