@@ -29,7 +29,7 @@ export default function PayoutCalculator({ articleCounts }) {
   const totalPayout = calculatePayout(articleTypeCount);
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 mb-6 mt-10">
+    <div className="bg-white rounded-lg shadow-md p-4 mb-6 mt-2">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold text-blue-900">Payout Summary</h2>
         {isAdmin && (
